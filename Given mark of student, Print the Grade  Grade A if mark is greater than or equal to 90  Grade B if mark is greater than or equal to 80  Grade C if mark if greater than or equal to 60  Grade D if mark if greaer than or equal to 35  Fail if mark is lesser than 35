@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class studyopedia {
+                 public static void main(String[] args) {
+                Scanner scan = new Scanner(System.in);
+                int num =scan.nextInt();
+                 if(num>=90){ 
+                    System.out.println("Grade A");
+                }  if(num<=80) {
+                    System.out.println("Grade B");
+                }
+                if(num<=60){
+                    System.out.println("Grade C");
+                }
+                if(num<=35){
+                    System.out.println("Grade d");
+                }
+                else if(num<=34){
+                    System.out.println("fail");
+                }
+        
+    }
+}
