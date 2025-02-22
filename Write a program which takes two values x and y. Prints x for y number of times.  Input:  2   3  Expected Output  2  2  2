@@ -1,0 +1,9 @@
+public class studyopedia {
+                 public static void main(String[] args) {
+                int x =1;
+                for (x=0;x<3;x++){
+     System.out.println("2");
+}
+            
+}    
+}
