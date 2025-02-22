@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class studyopedia {
+                 public static void main(String[] args) {
+                    Scanner scan = new Scanner(System.in);
+                    int n =scan.nextInt();
+                    scan.nextLine();
+       String fristname=scan.nextLine();
+                String secondname=scan.nextLine();
+                String add=fristname+secondname;
+  for(int i=0;i<=n;i++)
+                {
+                    System.out.println(add);
+                }
+}
+}
+    
