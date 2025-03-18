@@ -1,0 +1,37 @@
+import java.util.*;
+
+class Solution {
+    static int sumOfPrimesInRange(int L, int R) {
+        
+        boolean[] isPrime = new boolean[R + 1];
+        Arrays.fill(isPrime, true);
+        isPrime[0] = isPrime[1] = false;
+
+        
+        for (int i = 2; i * i <= R; i++) {
+            if (isPrime[i]) {
+                for (int j = i * i; j <= R; j += i) {
+                    isPrime[j] = false; 
+                }
+            }
+        }
+
+   
+        int sum = 0;
+        for (int i = Math.max(L, 2); i <= R; i++) {
+            if (isPrime[i]) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        int L = 10, R = 20;
+        System.out.println("Sum = " + sumOfPrimesInRange(L, R)); 
+
+        L = 15; R = 25;
+        System.out.println("Sum = " + sumOfPrimesInRange(L, R)); 
+    }
+}
